@@ -4,7 +4,7 @@ import { useRoute, useRouter } from 'vue-router'
 import axios from 'axios'
 import { theatres } from '../data/theatres'
 
-const API_BASE = 'http://localhost:5005/api'
+const API_BASE = 'http:///api'
 const route = useRoute()
 const router = useRouter()
 
