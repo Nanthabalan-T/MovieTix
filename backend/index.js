@@ -33,7 +33,7 @@ app.use(cors({
   origin: [
     'http://localhost:5173',
     'http://localhost:3000',
-    'https://movietix-frontend-0ud1.onrender.com'
+    'https://movie-tix.onrender.com'
   ],
   credentials: true
 }));
