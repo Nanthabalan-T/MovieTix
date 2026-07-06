@@ -7,7 +7,6 @@ const pool = require('./config/database');
 
 const bookingRoutes = require('./routes/bookingRoutes');
 const dashboardRoutes = require('./routes/dashboardRoutes');
-const weatherRoutes = require('./routes/weatherRoutes');
 const movieRoutes = require('./routes/movieRoutes');
 
 const app = express();
@@ -37,6 +36,7 @@ app.use(cors({
   ],
   credentials: true
 }));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -50,7 +50,6 @@ app.use((req, res, next) => {
 app.use('/api/movies', movieRoutes);
 app.use('/api/bookings', bookingRoutes);
 app.use('/api/dashboard', dashboardRoutes);
-app.use('/api/weather', weatherRoutes);
 
 // Health Check
 app.get('/api/health', (req, res) => {
@@ -106,11 +105,14 @@ async function startServer() {
     if (err.code === 'EADDRINUSE') {
       console.error(`❌ Port ${PORT} is already in use. Trying port ${PORT + 1}...`);
       const newPort = PORT + 1;
+
       const fallbackServer = http.createServer(app);
+
       fallbackServer.on('error', (fallbackErr) => {
-        console.error(`❌ Could not start server on port ${newPort} either:`, fallbackErr.message);
+        console.error(`❌ Could not start server on port ${newPort}:`, fallbackErr.message);
         process.exit(1);
       });
+
       fallbackServer.listen(newPort, () => {
         console.log(`
 ====================================
@@ -121,7 +123,7 @@ async function startServer() {
  URL         : http://localhost:${newPort}
  API         : http://localhost:${newPort}/api
  Health      : http://localhost:${newPort}/api/health
-===================================
+====================================
 `);
       });
     } else {
@@ -140,7 +142,7 @@ async function startServer() {
  URL         : http://localhost:${PORT}
  API         : http://localhost:${PORT}/api
  Health      : http://localhost:${PORT}/api/health
-===================================
+====================================
 `);
   });
 }
