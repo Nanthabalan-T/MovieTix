@@ -6,7 +6,7 @@ import WeatherWidget from '../components/WeatherWidget.vue'
 import MovieCard from '../components/MovieCard.vue'
 import { theatres } from '../data/theatres'
 
-const API_BASE = 'htp://localhostt:5005/api'
+const API_BASE = 'http://localhostt:5005/api'
 
 const trendingMovies = ref([])
 const featuredMovies = ref([])
