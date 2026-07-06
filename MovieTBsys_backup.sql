@@ -146,7 +146,7 @@ COPY public.bookings (booking_id, movie_name, theatre_name, show_date, show_time
 --
 
 COPY public.movies (id, title, genre, language, duration, certificate, release_date, poster, description, rating, year, status, trending, featured, created_at) FROM stdin;
-1	Leo	Action	Tamil	2h 42m	U/A	2023-10-19	https://image.tmdb.org/t/p/w500/npdB6eFzizki0WaZ1OvKcJV3scu.jpg	A man embroiled in the underworld is forced to confront his violent past when his family is threatened.	7.5	2023	Now Showing	t	t	2026-07-03 10:52:41.953758
+1	Leo	Action	Tamil	2h 42m	U/A	2023-10-19	https://pbs.twimg.com/media/FyvlqVpacAI0AUJ.jpg	A man embroiled in the underworld is forced to confront his violent past when his family is threatened.	7.5	2023	Now Showing	t	t	2026-07-03 10:52:41.953758
 2	RRR	Action	Telugu	2h 57m	U/A	2022-03-25	https://image.tmdb.org/t/p/w500/cNV5G2oH5n5KuP9bEgR0gDw5wG.jpg	A fictitious story about two legendary Indian revolutionaries and their journey away from and back to the motherland.	7.8	2022	Now Showing	t	f	2026-07-03 10:52:41.953758
 3	Jawan	Action	Hindi	2h 49m	U/A	2023-09-07	https://image.tmdb.org/t/p/w500/kS5pYhMkxSsd9nrdLPrxSvEoWkq.jpg	A man driven by a personal vendetta against a ruthless businessman systematically targets the corrupt system.	7.2	2023	Now Showing	t	f	2026-07-03 10:52:41.953758
 4	Coolie	Action	Tamil	2h 30m	U/A	2025-08-14	https://image.tmdb.org/t/p/w500/placeholder.jpg	A high-octane action thriller set in the world of gold smuggling.	0.0	2025	Coming Soon	t	t	2026-07-03 10:52:41.953758
