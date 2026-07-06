@@ -4,7 +4,7 @@ import axios from 'axios'
 import TheatreCard from '../components/TheatreCard.vue'
 import { theatres } from '../data/theatres'
 
-const API_BASE = 'http://localhost:5005/api'
+const API_BASE = import.meta.env.VITE_API_URL;
 const movies = ref([])
 const selectedMovie = ref(null)
 const isLoading = ref(true)
