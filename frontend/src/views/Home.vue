@@ -4,6 +4,7 @@ import axios from 'axios'
 import HeroBanner from '../components/HeroBanner.vue'
 import WeatherWidget from '../components/WeatherWidget.vue'
 import MovieCard from '../components/MovieCard.vue'
+import LiveTheatreStatus from '../components/LiveTheatreStatus.vue'
 import { theatres } from '../data/theatres'
 
 const API_BASE = import.meta.env.VITE_API_URL;
@@ -38,6 +39,12 @@ onMounted(fetchMovies)
     <section class="section weather-section">
       <div class="container">
         <WeatherWidget />
+      </div>
+    </section>
+
+    <section class="section live-theatre-section">
+      <div class="container">
+        <LiveTheatreStatus />
       </div>
     </section>
 
