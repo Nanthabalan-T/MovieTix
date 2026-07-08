@@ -39,7 +39,9 @@ const theatre = ref(null);
 let socket = null;
 
 onMounted(() => {
-  socket = new WebSocket("ws://localhost:5005");
+  const WS_URL = import.meta.env.VITE_WS_URL;
+
+  socket = new WebSocket(WS_URL);
 
   socket.onopen = () => {
     console.log("✅ WebSocket Connected");
